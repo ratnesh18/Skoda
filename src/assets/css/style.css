@@ -1,0 +1,79 @@
+@media only screen and (orientation:portrait){
+    .landscape { display:none; }
+    .portrait { display:block!Important; }
+    }
+	@media only screen and (orientation:landscape){
+	.portrait { display:none; }
+    .landscape { display:block; }
+	}
+    .h100{height: 100vh;}
+    .chatbox {
+        position: fixed;
+        top: 35%;
+        background-color: #000;
+        padding: 10px;
+        right: 0;
+        z-index: 999;
+        border-radius: 10px 0 0 10px;
+    }
+    .language {
+        position: fixed;
+        top: 45%;
+        background-color: #000;
+        padding: 10px;
+        right: 0;
+        z-index: 999;
+        border-radius: 10px 0 0 10px;
+    }
+     .videodiv {
+        height: 100vh;
+        width: 100vw;
+    }
+    .qna{height:80vh;}
+    #chat .modal-dialog{position:fixed;top:0;right:0;}
+    .sendbutton {font-size:11px!important;width:80px!important;}
+    .msgtext {
+        word-break: break-word;
+        line-height: 20px;
+        background-color: #eee;
+        padding: 8px;
+        border-radius: 8px;
+        color: #000;
+    }
+
+    .forcetop{position:fixed!important;top:0!important;width:100%!important; left:0;}
+    .selectlang > input[type="radio"]:checked + label {
+      background: #000;
+      color: #fff;
+    }
+    .selectlang > label {
+      padding: 1em;
+      display: inline-block;
+      border: 2px solid #000;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+      
+      .blank-label {
+        display: none;
+      }
+      input[type="radio"] {
+        display:none;
+      }
+    @media screen and (max-width: 1024px) and (min-width: 320px) {
+        .qna{height:46vh;}
+        
+        .chatbox {
+         
+          top: 30%!important;
+          
+      }
+    }
+
+    input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
