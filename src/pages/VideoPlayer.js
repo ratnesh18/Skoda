@@ -105,7 +105,7 @@ function VideoPlayer(options) {
             <div className="col-sm-6  text-center selectlang">
                 
 <input type="radio" id="Marathi" onChange={handleClick} name="language"    value="https://fcc3ddae59ed.us-west-2.playback.live-video.net/api/video/v1/us-west-2.893648527354.channel.xhP3ExfcX8ON.m3u8" />
-<label for="Marathi">Marathi</label>
+<label for="Marathi">Gujrati</label>
             </div>
         </div>
 
