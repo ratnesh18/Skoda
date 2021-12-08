@@ -76,14 +76,15 @@ export default function Test() {
       </div>
       <div className="form-group text-white">
       {/* <label for="userphone">Employee Code</label> */}
-      <select className="form-control" {...register("city")}>
+      <select className="form-control" {...register("city",{required: true})}>
+      <option value="">Select city</option>
         <option value="Chakkan">Chakkan</option>
         <option value="Aurangabad">Aurangabad</option>
         <option value="Bengaluru">Bengaluru</option>
         <option value="Mumbai">Mumbai</option>
         <option value="Gurgaon">Gurgaon</option>
       </select>
-      {errors.mobile && <span style={{color:'red'}}>*Mobile  is required</span>}
+      {errors.city && <span style={{color:'red'}}>*City  is required</span>}
       </div>
       <div className="form-group  text-center"><input type="image" src={Loginimg} className="img-fluid loginbtn1"/> </div>
       {/* <div className="form-group text-center mt-4">
