@@ -46,7 +46,7 @@ export default function Test() {
   <div className="landscape">
   <div class="container-fluid bgimg">
   <div className="col-sm-12 pt-md-5 pt-sm-3"><img src={Skodalogo} className="img-fluid skodalogo"/></div>
-  {!loginFlag?( <div className="row">
+  {!loginFlag?( <div className="row col-sm-12 pt-5">
     
     <div className="col-sm-6 text-center">
     <img src={Wework} className="img-fluid wework"/>
