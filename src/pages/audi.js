@@ -8,7 +8,7 @@ import Chat from './Chat'
 
 function audi() {
     return (
-        <div style={{backgroundColor:"black"}}>
+        <div >
 
 <div className="portrait">
   <div className="text-center text-white">
@@ -32,7 +32,7 @@ function audi() {
 
         <div className="modal-content">
             <div className="modal-header">
-                <h4 className="modal-title w-100" id="qnaModalLabel">Chat</h4>
+                <h4 className="modal-title w-100" id="qnaModalLabel">Q&A</h4>
                 <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true"><i className="fa fa-times-circle-o text-dark" aria-hidden="true"></i></span>
                 </button>
