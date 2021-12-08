@@ -16,7 +16,7 @@ export default function Test() {
   
 
   const onSubmit = (data,e )=>{
-    console.log(data);
+    console.log("FormData",data);
     e.preventDefault();
     axios
         .post('https://rry3le9ny4.execute-api.ap-south-1.amazonaws.com/api/login', data)
@@ -65,13 +65,24 @@ export default function Test() {
  <small id="msgHelp" style={{display:"none"}} class="form-text  text-danger">*Employee code isn't correct, Kindly recheck and login again.</small>
 <form onSubmit={handleSubmit(onSubmit)}>
     <div className="form-group text-white">
-<label for="employeename">Name</label>
-      <input className="form-control" {...register("name", { required: true, maxLength: 20 })}  />
+{/* <label for="employeename">Name</label> */}
+      <input className="form-control" placeholder="name" {...register("name", { required: true, maxLength: 20 })}  />
       {errors.name && <span style={{color:'red'}}>*Name  is required</span>}
       </div>
       <div className="form-group text-white">
-      <label for="userphone">Employee Code</label>
-      <input className="form-control" type="number"  {...register("mobile",  {valueAsNumber: true,required: true, maxLength : 10})} />
+      {/* <label for="userphone">Employee Code</label> */}
+      <input className="form-control" type="number" placeholder="Employee Code"  {...register("mobile",  {valueAsNumber: true,required: true, maxLength : 10})} />
+      {errors.mobile && <span style={{color:'red'}}>*Mobile  is required</span>}
+      </div>
+      <div className="form-group text-white">
+      {/* <label for="userphone">Employee Code</label> */}
+      <select className="form-control" {...register("city")}>
+        <option value="Chakkan">Chakkan</option>
+        <option value="Aurangabad">Aurangabad</option>
+        <option value="Bengaluru">Bengaluru</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Gurgaon">Gurgaon</option>
+      </select>
       {errors.mobile && <span style={{color:'red'}}>*Mobile  is required</span>}
       </div>
       <div className="form-group  text-center"><input type="image" src={Loginimg} className="img-fluid loginbtn1"/> </div>
