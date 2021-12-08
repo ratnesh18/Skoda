@@ -13,6 +13,8 @@ export default function Test() {
   const { register, handleSubmit,formState: { errors } } = useForm();
   const [loginFlag,setLoginFlag] = useState(false)
 
+  
+
   const onSubmit = (data,e )=>{
     console.log(data);
     e.preventDefault();
@@ -60,11 +62,11 @@ export default function Test() {
 
 
  <div className="form col-sm-12 col-md-6 mt-lg-5 mt-sm-0">
- <small id="msgHelp" style={{display:"none"}} class="form-text  text-danger">*Employee Code is not found</small>
+ <small id="msgHelp" style={{display:"none"}} class="form-text  text-danger">*Employee code isn't correct, Kindly recheck and login again.</small>
 <form onSubmit={handleSubmit(onSubmit)}>
     <div className="form-group text-white">
 <label for="employeename">Employee Name</label>
-      <input className="form-control" {...register("name", { required: true, maxLength: 20 })} />
+      <input className="form-control" {...register("name", { required: true, maxLength: 20 })}  />
       {errors.name && <span style={{color:'red'}}>*Name  is required</span>}
       </div>
       <div className="form-group text-white">

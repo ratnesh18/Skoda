@@ -16,7 +16,9 @@ function VideoPlayer(options) {
    // const [stremUrl,setStreamUrl] = useState("https://fcc3ddae59ed.us-west-2.playback.live-video.net/api/video/v1/us-west-2.893648527354.channel.DmumNckWFTqz.m3u8")
     const [stremUrl,setStreamUrl] = useState("654414232")
     
-    
+    useEffect(()=>{
+    document.getElementById('English').checked = true;
+  },[])
 
     
 
