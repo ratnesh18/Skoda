@@ -48,11 +48,11 @@ export default function Test() {
   <div className="landscape">
   <div class="container-fluid bgimg">
   <div className="col-sm-12 pt-md-5 pt-sm-3"><img src={Skodalogo} className="img-fluid skodalogo"/></div>
-  {!loginFlag?( <div className="row col-sm-12 pt-5">
+  {!loginFlag?( <div className="row col-sm-12 pt-3">
     
     <div className="col-sm-6 text-center">
     <img src={Wework} className="img-fluid wework"/>
-    <div className="ml-5 text-left"><img src={Loginbtn} onClick={()=>setLoginFlag(!loginFlag)} className="img-fluid loginbtn pl-5"/> </div>
+    <div className="ml-5 text-left"><img src={Loginbtn} onClick={()=>setLoginFlag(!loginFlag)} className="img-fluid loginbtn pl-2"/> </div>
      </div>
     <div className="col-sm-6 text-center"><img src={Wenot} className="img-fluid wenot"  /></div>
     </div> ):""}
@@ -66,7 +66,7 @@ export default function Test() {
 <form onSubmit={handleSubmit(onSubmit)}>
     <div className="form-group text-white">
 {/* <label for="employeename">Name</label> */}
-      <input className="form-control" placeholder="name" {...register("name", { required: true, maxLength: 20 })}  />
+      <input className="form-control" placeholder="Name" {...register("name", { required: true, maxLength: 20 })}  />
       {errors.name && <span style={{color:'red'}}>*Name  is required</span>}
       </div>
       <div className="form-group text-white">
