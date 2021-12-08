@@ -65,12 +65,12 @@ export default function Test() {
  <small id="msgHelp" style={{display:"none"}} class="form-text  text-danger">*Employee code isn't correct, Kindly recheck and login again.</small>
 <form onSubmit={handleSubmit(onSubmit)}>
     <div className="form-group text-white">
-<label for="employeename">Employee Name</label>
+<label for="employeename">Name</label>
       <input className="form-control" {...register("name", { required: true, maxLength: 20 })}  />
       {errors.name && <span style={{color:'red'}}>*Name  is required</span>}
       </div>
       <div className="form-group text-white">
-<label for="userphone">Employee Code</label>
+      <label for="userphone">Employee Code</label>
       <input className="form-control" type="number"  {...register("mobile",  {valueAsNumber: true,required: true, maxLength : 10})} />
       {errors.mobile && <span style={{color:'red'}}>*Mobile  is required</span>}
       </div>
