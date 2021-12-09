@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Rotate from '../assets/img/rotate.png'
 import Chatimg from '../assets/img/chat.png'
 import Langu from '../assets/img/languagech.png'
@@ -6,7 +6,23 @@ import  '../assets/css/style.css'
 import VideoPlayer from './VideoPlayer'
 import Chat from './Chat'
 
-function audi() {
+function Audi() {
+
+  useEffect(()=>{
+console.log("Get code",localStorage.getItem("setupTime"))
+
+var setupTime = localStorage.getItem('setupTime');
+var now = Date.now();
+console.log("Time difference",now - setupTime)
+if (now - setupTime >15*1000*60*60) {
+  console.log("Login time expires");
+  window.location.href='/'
+}else{
+  console.log("Login time alive");
+}
+
+  },[])
+
     return (
         <div >
 
@@ -16,7 +32,7 @@ function audi() {
 </div>
   </div>
   <div className="landscape">
-  <div className="chatbox"><a href="javascript:void(0)" data-toggle="modal" data-target="#chat"><img src={Chatimg} /></a></div>
+  {/* <div className="chatbox"><a href="javascript:void(0)" data-toggle="modal" data-target="#chat"><img src={Chatimg} /></a></div> */}
   
 
   <div className="videodiv">
@@ -42,15 +58,14 @@ function audi() {
         </div>
     </div>
 
-</div>
+</div> 
 
 
   </div>
-
 
           
         </div>
     )
 }
 
-export default audi
+export default Audi

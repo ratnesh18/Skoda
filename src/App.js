@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Login from './pages/login';
 import Test from './pages/Test'
-import Audi from './pages/audi';
+import Audi from './pages/Audi';
 
 import { BrowserRouter as Router, Route,Routes , Link } from "react-router-dom";
 import VimeoPlayer from './pages/VimeoPlayer';

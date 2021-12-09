@@ -14,17 +14,19 @@ function VideoPlayer(options) {
     const divEl = useRef(null);
     const videoEl = useRef(null);
    // const [stremUrl,setStreamUrl] = useState("https://fcc3ddae59ed.us-west-2.playback.live-video.net/api/video/v1/us-west-2.893648527354.channel.DmumNckWFTqz.m3u8")
-    const [stremUrl,setStreamUrl] = useState("654414232")
+    const [stremUrl,setStreamUrl] = useState("")
     
     useEffect(()=>{
-    document.getElementById('English').checked = true;
+   // document.getElementById('English').checked = true;
+   
+    document.getElementById("imgchat").click();
   },[])
 
     
 
     const handleClick = e => {
         $("[data-dismiss=modal]").trigger({ type: "click" });
-        console.log("ID ",e.target.id)
+      //  console.log("ID ",e.target.id)
         document.getElementById(e.target.id).checked = true;
        // console.log("Duration ",document.getElementById("vimeo-player"))
        
@@ -38,7 +40,7 @@ function VideoPlayer(options) {
 
     return (
         <div ref={divEl} >
-             <div className="language"><a href="javascript:void(0)" data-toggle="modal" data-target="#languagechange"><img src={Langu} /></a></div>
+             <div className="language"><a href="javascript:void(0)" data-toggle="modal" data-target="#languagechange"><img id="imgchat" src={Langu} /></a></div>
              {/* <div className="iconBox"><a href="javascript:void(0)" data-toggle="modal" data-target="#qamodal"><img src={ChatImg} alt="QA"/></a>
             
              </div>  */}
@@ -58,7 +60,7 @@ function VideoPlayer(options) {
                 style={{height:"100Vh",width:"100vw"}}
             /> */}
             <div id="pplayer" style={{ position:'absolute', top:'0', width:'83vw', height:'100vh', left:'9%', bottom:'0'}}>
-             <Vimeo id="vimeo-player" video={stremUrl} responsive autoplay/>
+           {stremUrl?(<Vimeo id="vimeo-player" video={stremUrl} responsive autoplay/>):""}  
              </div>
              {/* <div style={{"padding":"56.25% 0 0 0","position":"relative"}}><iframe src={stremUrl} frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullscreen style={{"position":"absolute","top":0,"left":0,"width":"100%","height":"100%"}} title="ITC Fabelle Press Meet"></iframe></div> */}
              <div className="modal fade" id="languagechange" tabindex="-1" data-backdrop="static"  aria-labelledby="exampleModalLabel" aria-hidden="true">

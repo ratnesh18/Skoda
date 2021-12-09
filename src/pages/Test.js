@@ -8,6 +8,8 @@ import Loginbtn from '../assets/img/login-btn.png'
 import Wenot from '../assets/img/we-not.png'
 import Skodalogo from '../assets/img/skoda-logo.png'
 import Loginimg from '../assets/img/login-img.png'
+import datetime from '../assets/img/date-time.png'
+import covidline from '../assets/img/covid-line.png'
 
 export default function Test() {
   const { register, handleSubmit,formState: { errors } } = useForm();
@@ -25,6 +27,9 @@ export default function Test() {
           if(response.data.status){
             localStorage.setItem("userId",response.data.user.id);
             localStorage.setItem("name",response.data.user.name);
+            localStorage.setItem('setupTime', Date.now());
+           // document.cookie="empcode=`{response.data.user}`;max-age="+20;
+          
            // history.push('/audi');
            window.location.href='/audi'
           }else{
@@ -48,20 +53,22 @@ export default function Test() {
   <div className="landscape">
   <div class="container-fluid bgimg">
   <div className="col-sm-12 pt-md-5 pt-sm-3"><img src={Skodalogo} className="img-fluid skodalogo"/></div>
-  {!loginFlag?( <div className="row col-sm-12 pt-3">
+  {!loginFlag?( <div className="row col-sm-12 pt-5 pt-sm-3 pt-md-3">
     
     <div className="col-sm-6 text-center">
     <img src={Wework} className="img-fluid wework"/>
-    {/* <div className="ml-5 text-left"><img src={Loginbtn} onClick={()=>setLoginFlag(!loginFlag)} className="img-fluid loginbtn pl-2"/> </div> */}
+     <div className="ml-5 text-left"><img src={Loginbtn} onClick={()=>setLoginFlag(!loginFlag)} className="img-fluid loginbtn pl-5"/> </div> 
      </div>
-    <div className="col-sm-6 text-center"><img src={Wenot} className="img-fluid wenot"  /></div>
+    <div className="col-sm-6 text-center"><img src={Wenot} className="img-fluid wenot"  />
+    <br/><img src={datetime}  className="img-fluid wenot mt-lg-5 mt-md-3 mt-sm-3"/>
+    </div>
     </div> ):""}
   
 {loginFlag?( <div className="row">
-<div className="col-sm-6 mt-lg-5 mt-sm-2 text-center d-flex justify-content-center">
+<div className="col-sm-6 mt-lg-5 mt-sm-3 text-center d-flex justify-content-center">
 
 
- <div className="form col-sm-12 col-md-6 mt-lg-5 mt-sm-0">
+ <div className="form col-sm-12 col-md-6 mt-lg-5 mt-sm-3">
  <small id="msgHelp" style={{display:"none"}} class="form-text  text-danger">*Employee code isn't correct, Kindly recheck and login again.</small>
 <form onSubmit={handleSubmit(onSubmit)}>
     <div className="form-group text-white">
@@ -93,9 +100,9 @@ export default function Test() {
     </form>
     </div>
     </div>
-    <div className="col-sm-6 text-center"><img src={Wenot} className="img-fluid wenot"/></div>
+    <div className="col-sm-6 text-center"><img src={Wenot} className="img-fluid wenot"/> <br/><img src={datetime}  className="img-fluid wenot mt-lg-5 mt-md-3 mt-sm-3"/></div>
     </div>):""}
- 
+    <div className="mt-sm-1 mt-lg-5 mt-md-3"><img src={covidline} className="img-fluid" alt=""/></div>
     </div>
     </div>
     </div>
