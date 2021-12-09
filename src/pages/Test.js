@@ -68,7 +68,7 @@ export default function Test() {
 <div className="col-sm-6 mt-lg-5 mt-sm-3 text-center d-flex justify-content-center">
 
 
- <div className="form col-sm-12 col-md-6 mt-lg-5 mt-sm-3">
+ <div className="form col-sm-8 col-md-8 col-lg-6 mt-lg-5 mt-sm-3">
  <small id="msgHelp" style={{display:"none"}} class="form-text  text-danger">*Employee code isn't correct, Kindly recheck and login again.</small>
 <form onSubmit={handleSubmit(onSubmit)}>
     <div className="form-group text-white">
@@ -102,7 +102,7 @@ export default function Test() {
     </div>
     <div className="col-sm-6 text-center"><img src={Wenot} className="img-fluid wenot"/> <br/><img src={datetime}  className="img-fluid wenot mt-lg-5 mt-md-3 mt-sm-3"/></div>
     </div>):""}
-    <div className="mt-sm-1 mt-lg-5 mt-md-3"><img src={covidline} className="img-fluid" alt="" /></div>
+    <div className="covid mt-sm-1 mt-lg-5 mt-md-3"><img src={covidline} className="img-fluid" alt="" /></div>
     </div>
     </div>
     </div>
