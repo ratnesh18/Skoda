@@ -43,7 +43,7 @@ export default function Test() {
   } 
    
   return (
-
+  
     <div >
         <div className="portrait">
   <div className="text-center text-white">
