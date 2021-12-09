@@ -52,7 +52,7 @@ export default function Test() {
     
     <div className="col-sm-6 text-center">
     <img src={Wework} className="img-fluid wework"/>
-    <div className="ml-5 text-left"><img src={Loginbtn} onClick={()=>setLoginFlag(!loginFlag)} className="img-fluid loginbtn pl-2"/> </div>
+    {/* <div className="ml-5 text-left"><img src={Loginbtn} onClick={()=>setLoginFlag(!loginFlag)} className="img-fluid loginbtn pl-2"/> </div> */}
      </div>
     <div className="col-sm-6 text-center"><img src={Wenot} className="img-fluid wenot"  /></div>
     </div> ):""}
@@ -78,11 +78,11 @@ export default function Test() {
       {/* <label for="userphone">Employee Code</label> */}
       <select className="form-control" {...register("city",{required: true})}>
       <option value="">Select city</option>
-        <option value="Chakkan">Chakkan</option>
+        <option value="Pune">Pune</option>
         <option value="Aurangabad">Aurangabad</option>
         <option value="Bengaluru">Bengaluru</option>
         <option value="Mumbai">Mumbai</option>
-        <option value="Gurgaon">Gurgaon</option>
+        <option value="Gurugram">Gurugram</option>
       </select>
       {errors.city && <span style={{color:'red'}}>*City  is required</span>}
       </div>
