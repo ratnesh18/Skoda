@@ -72,7 +72,7 @@ export default function Test() {
       <div className="form-group text-white">
       {/* <label for="userphone">Employee Code</label> */}
       <input className="form-control" type="number" placeholder="Employee Code"  {...register("mobile",  {valueAsNumber: true,required: true, maxLength : 10})} />
-      {errors.mobile && <span style={{color:'red'}}>*Mobile  is required</span>}
+      {errors.mobile && <span style={{color:'red'}}>*Employee code  is required</span>}
       </div>
       <div className="form-group text-white">
       {/* <label for="userphone">Employee Code</label> */}
