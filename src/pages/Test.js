@@ -102,7 +102,7 @@ export default function Test() {
     </div>
     <div className="col-sm-6 text-center"><img src={Wenot} className="img-fluid wenot"/> <br/><img src={datetime}  className="img-fluid wenot mt-lg-5 mt-md-3 mt-sm-3"/></div>
     </div>):""}
-    <div className="mt-sm-1 mt-lg-5 mt-md-3"><img src={covidline} className="img-fluid" alt=""/></div>
+    <div className="mt-sm-1 mt-lg-5 mt-md-3"><img src={covidline} className="img-fluid" alt="" /></div>
     </div>
     </div>
     </div>
