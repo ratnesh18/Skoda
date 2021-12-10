@@ -14,6 +14,31 @@ import covidline from '../assets/img/covid-line.png'
 export default function Test() {
   const { register, handleSubmit,formState: { errors } } = useForm();
   const [loginFlag,setLoginFlag] = useState(false)
+  const [clickButton,setClickButton] = useState(0)
+
+  useEffect(()=>{
+  const  intervalID = setInterval(()=>{
+    axios
+        .post('https://rry3le9ny4.execute-api.ap-south-1.amazonaws.com/api/refresh')
+        .then(function (response) {
+          console.log("Login response ",response.data.loginStatus);
+          if(response.data.loginStatus==1){
+            setClickButton(1);
+          }else{
+            setClickButton(0);
+          }
+
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+      },5000)
+      return () => {
+        clearInterval(intervalID);
+      };
+
+  },[])
+
 
   
 
@@ -28,11 +53,12 @@ export default function Test() {
             localStorage.setItem("userId",response.data.user.id);
             localStorage.setItem("name",response.data.user.name);
             localStorage.setItem('setupTime', Date.now());
-           // document.cookie="empcode=`{response.data.user}`;max-age="+20;
           
-           // history.push('/audi');
-          // window.location.href='/audi'
-          window.location.href='/test'
+          
+          
+        
+           window.location.href='/audi'
+        
           }else{
               document.getElementById("msgHelp").style.display="block"
           }
@@ -58,7 +84,7 @@ export default function Test() {
     
     <div className="col-sm-6 text-center">
     <img src={Wework} className="img-fluid wework"/>
-      <div className="ml-5 text-left"><img src={Loginbtn} onClick={()=>setLoginFlag(!loginFlag)} className="img-fluid loginbtn pl-5"/> </div>  
+    {clickButton==1?(<div className="ml-5 text-left"><img src={Loginbtn} onClick={()=>setLoginFlag(!loginFlag)} className="img-fluid loginbtn pl-5"/> </div>  ):""}  
      </div>
     <div className="col-sm-6 text-center"><img src={Wenot} className="img-fluid wenot"  />
     <br/><img src={datetime}  className="img-fluid wenot mt-lg-5 mt-md-3 mt-sm-3"/>

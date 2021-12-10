@@ -53,7 +53,7 @@ if (now - setupTime >15*1000*60*60) {
                     <span aria-hidden="true"><i className="fa fa-times-circle-o text-dark" aria-hidden="true"></i></span>
                 </button>
             </div>
-             <Chat/> 
+             {/* <Chat/>  */}
           
         </div>
     </div>
