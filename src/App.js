@@ -13,7 +13,7 @@ function App() {
   return (
     <div>
        
-      <Router history={customHistory} basename="skoda" >
+      <Router history={customHistory}  >
       <Routes>
            
            <Route exact path="audi"  element={<Audi/>} />
