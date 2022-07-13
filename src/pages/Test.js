@@ -54,7 +54,7 @@ export default function Test() {
             localStorage.setItem("name",response.data.user.name);
             localStorage.setItem('setupTime', Date.now());
           
-           window.location.href='/skoda/audi'
+           window.location.href='/audi'
         
           }else{
               document.getElementById("msgHelp").style.display="block"
