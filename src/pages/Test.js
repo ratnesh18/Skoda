@@ -54,7 +54,7 @@ export default function Test() {
             localStorage.setItem("name",response.data.user.name);
             localStorage.setItem('setupTime', Date.now());
           
-           window.location.href='/audi'
+           window.location.href='/skoda/audi'
         
           }else{
               document.getElementById("msgHelp").style.display="block"
@@ -81,7 +81,9 @@ export default function Test() {
     
     <div className="col-sm-6 text-center">
     <img src={Wework} className="img-fluid wework"/>
-    {clickButton==1?(<div className="ml-5 text-left"><img src={Loginbtn} onClick={()=>setLoginFlag(!loginFlag)} className="img-fluid loginbtn pl-5"/> </div>  ):""}  
+    {/* {clickButton==1?( */}
+    <div className="ml-5 text-left"><img src={Loginbtn} onClick={()=>setLoginFlag(!loginFlag)} className="img-fluid loginbtn pl-5"/> </div>  
+    {/* ):""}   */}
      </div>
     <div className="col-sm-6 text-center"><img src={Wenot} className="img-fluid wenot"  />
     <br/><img src={datetime}  className="img-fluid wenot mt-lg-5 mt-md-3 mt-sm-3"/>

@@ -27,8 +27,6 @@ class Chat extends Component{
 
       };
 
-      
-   
       componentDidMount(){
         axios
           .post('https://rry3le9ny4.execute-api.ap-south-1.amazonaws.com/api/getChat')

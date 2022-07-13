@@ -8,20 +8,20 @@ import Chat from './Chat'
 
 function Audi() {
 //file updated ...
-  useEffect(()=>{
-console.log("Get code",localStorage.getItem("setupTime"))
+//   useEffect(()=>{
+// console.log("Get code",localStorage.getItem("setupTime"))
 
-var setupTime = localStorage.getItem('setupTime');
-var now = Date.now();
-console.log("Time difference",now - setupTime)
-if (now - setupTime >15*1000*60*60) {
-  console.log("Login time expires");
-  window.location.href='/'
-}else{
-  console.log("Login time alive");  
-}
+// var setupTime = localStorage.getItem('setupTime');
+// var now = Date.now();
+// console.log("Time difference",now - setupTime)
+// if (now - setupTime >15*1000*60*60) {
+//   console.log("Login time expires");
+//   window.location.href='/'
+// }else{
+//   console.log("Login time alive");  
+// }
 
-  },[])
+//   },[])
 
     return (
         <div >
@@ -32,14 +32,14 @@ if (now - setupTime >15*1000*60*60) {
 </div>
   </div>
   <div className="landscape">
-  {/* <div className="chatbox"><a href="javascript:void(0)" data-toggle="modal" data-target="#chat"><img src={Chatimg} /></a></div> */}
+   <div className="chatbox"><a href="javascript:void(0)" data-toggle="modal" data-target="#chat"><img src={Chatimg} /></a></div> 
   
 
   <div className="videodiv">
 <VideoPlayer/>
 
   </div>
-  <div className="modal fade right rightmodal" id="chat" data-backdrop="static" tabindex="-1" role="dialog"
+  <div className="modal fade " id="chat" data-backdrop="static" tabindex="-1" role="dialog"
     aria-labelledby="qnaModalLabel" aria-hidden="true">
 
     
@@ -53,7 +53,7 @@ if (now - setupTime >15*1000*60*60) {
                     <span aria-hidden="true"><i className="fa fa-times-circle-o text-dark" aria-hidden="true"></i></span>
                 </button>
             </div>
-             {/* <Chat/>  */}
+              <Chat/>  
           
         </div>
     </div>

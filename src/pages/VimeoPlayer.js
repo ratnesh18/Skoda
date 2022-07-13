@@ -12,12 +12,12 @@ export default class VimeoPlayer extends Component {
                     <div className="portrait">
                        <div className="text-center text-white">
                          <img src={Rotate} className="img-fluid h100" alt=""/>
-                      </div>
                     </div>
-                        <div className="landscape" id="pplayer" style={{ position:'absolute', top:'0', width:'83vw', height:'100vh', left:'9%', bottom:'0'}}>
+                    </div>
+                    <div className="landscape" id="pplayer" style={{ position:'absolute', top:'0', width:'83vw', height:'100vh', left:'9%', bottom:'0'}}>
                         <Vimeo id="vimeo-player" video="654414232" responsive autoplay/>
-                     </div>
-             </div>
+                    </div>
+            </div>
         )
     }
 }
