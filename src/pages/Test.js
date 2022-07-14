@@ -86,8 +86,8 @@ export default function Test() {
     </div>
     <div class="row mt-5">
     <div className="col-sm-6 text-left align-self-center"><img src={Loginbtn} 
-    // onClick={()=>setLoginFlag(!loginFlag)} 
-    className="img-fluid loginbtn pl-5"/> </div>  
+     onClick={()=>setLoginFlag(!loginFlag)} 
+    className="img-fluid loginbtn pl-5 d-none"/> </div>  
     {/* ):""}   */}
      
     <div className="col-sm-6 text-center align-self-center"><img src={Wenot} className="img-fluid wenot"/></div></div>
@@ -113,7 +113,7 @@ export default function Test() {
       <div className="form-group text-white">
       {/* <label for="userphone">Employee Code</label> */}
       <select className="form-control" {...register("city",{required: true})}>
-      <option value="">Select city</option>
+      <option value="">Select City</option>
         <option value="Pune">Pune</option>
         <option value="Aurangabad">Aurangabad</option>
         <option value="Bengaluru">Bengaluru</option>
@@ -129,7 +129,7 @@ export default function Test() {
     </form>
     </div>
     </div>
-    <div className="col-sm-6 text-center"><img src={Wenot} className="img-fluid wenot"/> <br/><img src={datetime}  className="img-fluid wenot mt-lg-5 mt-md-3 mt-sm-3"/></div>
+    <div className="col-sm-6 text-center justify-content-center"><img src={Wenot} className="img-fluid"/> </div>
     </div>):""}
     {/* <div className="covid mt-sm-1 mt-lg-5 mt-md-3"><img src={covidline} className="img-fluid" alt="" /></div> */}
     </div>
