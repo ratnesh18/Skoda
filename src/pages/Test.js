@@ -53,7 +53,7 @@ export default function Test() {
             localStorage.setItem("userId",response.data.user.id);
             localStorage.setItem("name",response.data.user.name);
             localStorage.setItem('setupTime', Date.now());
-          
+           
            window.location.href='/audi'
         
           }else{
@@ -85,16 +85,18 @@ export default function Test() {
     {/* {clickButton==1?( */}
     </div>
     <div class="row mt-5">
-    <div className="col-sm-6 text-left align-self-center"><img src={Loginbtn} 
+    <div className="col-sm-6 text-left align-self-center">
+      {/* <img src={Loginbtn} 
      onClick={()=>setLoginFlag(!loginFlag)} 
-    className="img-fluid loginbtn pl-5 d-none"/> </div>  
+    className="img-fluid loginbtn pl-5"/> */}
+     </div>  
     {/* ):""}   */}
      
     <div className="col-sm-6 text-center align-self-center"><img src={Wenot} className="img-fluid wenot"/></div></div>
     </div> ):""}
   
 {loginFlag?( <div className="row">
-<div className="col-sm-6 mt-lg-5 mt-sm-3 text-center d-flex justify-content-center">
+<div className="col-sm-8 col-md-8 col-lg-6 mt-lg-5 mt-sm-3 text-center d-flex justify-content-center align-self-center">
 
 
  <div className="form col-sm-8 col-md-8 col-lg-6 mt-lg-5 mt-sm-3">
@@ -129,7 +131,7 @@ export default function Test() {
     </form>
     </div>
     </div>
-    <div className="col-sm-6 text-center justify-content-center"><img src={Wenot} className="img-fluid"/> </div>
+    <div className="col-sm-4  col-md-4 col-lg-6  text-center align-self-center"><img src={Wenot} className="img-fluid"/> </div>
     </div>):""}
     {/* <div className="covid mt-sm-1 mt-lg-5 mt-md-3"><img src={covidline} className="img-fluid" alt="" /></div> */}
     </div>

@@ -17,6 +17,7 @@ function App() {
       <Routes>
            
            <Route exact path="audi"  element={<Audi/>} />
+           <Route exact path="event-test"  element={<Audi/>} />
            <Route exact path="event"  element={<VimeoPlayer/>} />
            <Route  exact path="/"  element={ <Test />} /> 
         </Routes>

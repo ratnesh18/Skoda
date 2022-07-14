@@ -32,7 +32,7 @@ function Audi() {
 </div>
   </div>
   <div className="landscape">
-   <div className="chatbox"><a href="javascript:void(0)" data-toggle="modal" data-target="#chat"><img src={Chatimg} /></a></div> 
+   {/* <div className="chatbox"><a href="javascript:void(0)" data-toggle="modal" data-target="#chat"><img src={Chatimg} /></a></div>  */}
   
 
   <div className="videodiv">
