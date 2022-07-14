@@ -85,7 +85,9 @@ export default function Test() {
     {/* {clickButton==1?( */}
     </div>
     <div class="row mt-5">
-    <div className="col-sm-6 text-left align-self-center"><img src={Loginbtn} onClick={()=>setLoginFlag(!loginFlag)} className="img-fluid loginbtn pl-5"/> </div>  
+    <div className="col-sm-6 text-left align-self-center"><img src={Loginbtn} 
+    // onClick={()=>setLoginFlag(!loginFlag)} 
+    className="img-fluid loginbtn pl-5"/> </div>  
     {/* ):""}   */}
      
     <div className="col-sm-6 text-center align-self-center"><img src={Wenot} className="img-fluid wenot"/></div></div>
