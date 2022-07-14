@@ -75,19 +75,20 @@ export default function Test() {
 </div>
   </div>
   <div className="landscape">
-  <div class="container-fluid bgimg">
+  <div class="container-fluid bgimg pl-5">
   <div className="col-sm-12 pt-md-5 pt-sm-3"><img src={Skodalogo} className="img-fluid skodalogo"/></div>
-  {!loginFlag?( <div className="row col-sm-12 pt-5 pt-sm-3 pt-md-3">
+  {!loginFlag?( 
+  <div className="col-sm-12 pt-5 pt-sm-3 pt-md-3">
     
-    <div className="col-sm-6 text-center">
+    <div className="col-sm-12 mt-5">
     <img src={Wework} className="img-fluid wework"/>
     {/* {clickButton==1?( */}
-    <div className="ml-5 text-left"><img src={Loginbtn} onClick={()=>setLoginFlag(!loginFlag)} className="img-fluid loginbtn pl-5"/> </div>  
-    {/* ):""}   */}
-     </div>
-    <div className="col-sm-6 text-center"><img src={Wenot} className="img-fluid wenot"  />
-    <br/><img src={datetime}  className="img-fluid wenot mt-lg-5 mt-md-3 mt-sm-3"/>
     </div>
+    <div class="row mt-5">
+    <div className="col-sm-6 text-left align-self-center"><img src={Loginbtn} onClick={()=>setLoginFlag(!loginFlag)} className="img-fluid loginbtn pl-5"/> </div>  
+    {/* ):""}   */}
+     
+    <div className="col-sm-6 text-center align-self-center"><img src={Wenot} className="img-fluid wenot"/></div></div>
     </div> ):""}
   
 {loginFlag?( <div className="row">
@@ -128,7 +129,7 @@ export default function Test() {
     </div>
     <div className="col-sm-6 text-center"><img src={Wenot} className="img-fluid wenot"/> <br/><img src={datetime}  className="img-fluid wenot mt-lg-5 mt-md-3 mt-sm-3"/></div>
     </div>):""}
-    <div className="covid mt-sm-1 mt-lg-5 mt-md-3"><img src={covidline} className="img-fluid" alt="" /></div>
+    {/* <div className="covid mt-sm-1 mt-lg-5 mt-md-3"><img src={covidline} className="img-fluid" alt="" /></div> */}
     </div>
     </div>
     </div>
