@@ -15,6 +15,7 @@ export default function Test() {
   const { register, handleSubmit,formState: { errors } } = useForm();
   const [loginFlag,setLoginFlag] = useState(false)
   const [clickButton,setClickButton] = useState(0)
+  const[openLogin,setOpenLogin]=useState(false)
 
   useEffect(()=>{
   const  intervalID = setInterval(()=>{
@@ -86,9 +87,10 @@ export default function Test() {
     </div>
     <div class="row mt-5">
     <div className="col-sm-6 text-left align-self-center">
-      {/* <img src={Loginbtn} 
+      {openLogin?(<img src={Loginbtn} 
      onClick={()=>setLoginFlag(!loginFlag)} 
-    className="img-fluid loginbtn pl-5"/> */}
+    className="img-fluid loginbtn pl-5"/> ):""}
+       
      </div>  
     {/* ):""}   */}
      
