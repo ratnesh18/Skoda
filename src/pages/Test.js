@@ -15,12 +15,12 @@ export default function Test() {
   const { register, handleSubmit,formState: { errors } } = useForm();
   const [loginFlag,setLoginFlag] = useState(false)
   const [clickButton,setClickButton] = useState(0)
-  const[openLogin,setOpenLogin]=useState(false)
+  const[openLogin,setOpenLogin]=useState(true)
 
   useEffect(()=>{
   const  intervalID = setInterval(()=>{
 
-    window.location.reload()
+   // window.location.reload()
 
     // axios
     //     .post('https://rry3le9ny4.execute-api.ap-south-1.amazonaws.com/api/refresh')
@@ -84,17 +84,20 @@ export default function Test() {
   {!loginFlag?( 
   <div className="col-sm-12 pt-5 pt-sm-3 pt-md-3">
     
-    <div className="col-sm-12 mt-5">
+    
+    <div class="row mt-5">
+   <div className='col-sm-6 align-self-center'>
+   <div className="col-sm-12 mt-5">
     <img src={Wework} className="img-fluid wework"/>
     {/* {clickButton==1?( */}
     </div>
-    <div class="row mt-5">
-    <div className="col-sm-6 text-left align-self-center">
+    <div className="col-sm-12 text-left mt-5">
       {openLogin?(<img src={Loginbtn} 
      onClick={()=>setLoginFlag(!loginFlag)} 
-    className="img-fluid loginbtn pl-5"/> ):""}
+    className="img-fluid loginbtn pl-5 pr-5"/> ):""}
        
-     </div>  
+     </div>
+    </div>  
     {/* ):""}   */}
      
     <div className="col-sm-6 text-center align-self-center"><img src={Wenot} className="img-fluid wenot"/></div></div>
