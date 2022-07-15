@@ -19,21 +19,24 @@ export default function Test() {
 
   useEffect(()=>{
   const  intervalID = setInterval(()=>{
-    axios
-        .post('https://rry3le9ny4.execute-api.ap-south-1.amazonaws.com/api/refresh')
-        .then(function (response) {
-          console.log("Login response ",response.data.loginStatus);
-          if(response.data.loginStatus==1){
-            setClickButton(1);
-          }else{
-            setClickButton(0);
-          }
 
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
-      },5000)
+    window.location.reload()
+
+    // axios
+    //     .post('https://rry3le9ny4.execute-api.ap-south-1.amazonaws.com/api/refresh')
+    //     .then(function (response) {
+    //       console.log("Login response ",response.data.loginStatus);
+    //       if(response.data.loginStatus==1){
+    //         setClickButton(1);
+    //       }else{
+    //         setClickButton(0);
+    //       }
+
+    //     })
+    //     .catch(function (error) {
+    //         console.log(error);
+    //     });
+      },30000)
       return () => {
         clearInterval(intervalID);
       };
