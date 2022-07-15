@@ -7,6 +7,21 @@ import VideoPlayer from './VideoPlayer'
 import Chat from './Chat'
 
 function Audi() {
+
+
+  useEffect(() => {
+    if (localStorage.getItem("userId")) {
+      
+    }else{
+      window.location.href="/"
+    }
+  
+    return () => {
+     
+    }
+  }, [])
+  
+
 //file updated ...
 //   useEffect(()=>{
 // console.log("Get code",localStorage.getItem("setupTime"))

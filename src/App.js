@@ -6,6 +6,7 @@ import Audi from './pages/Audi';
 import { BrowserRouter as Router, Route,Routes , Link } from "react-router-dom";
 import VimeoPlayer from './pages/VimeoPlayer';
 import { createBrowserHistory } from "history";
+import LoginTest from './pages/LoginTest';
 const customHistory = createBrowserHistory();
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
            
            <Route exact path="audi"  element={<Audi/>} />
            <Route exact path="event-test"  element={<Audi/>} />
+           <Route exact path="login-test"  element={<LoginTest/>} />
            <Route exact path="event"  element={<VimeoPlayer/>} />
            <Route  exact path="/"  element={ <Test />} /> 
         </Routes>

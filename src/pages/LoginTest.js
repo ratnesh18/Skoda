@@ -11,7 +11,7 @@ import Loginimg from '../assets/img/login-img.png'
 import datetime from '../assets/img/date-time.png'
 import covidline from '../assets/img/covid-line.png'
 
-export default function Test() {
+export default function LoginTest() {
   const { register, handleSubmit,formState: { errors } } = useForm();
   const [loginFlag,setLoginFlag] = useState(false)
   const [clickButton,setClickButton] = useState(0)
@@ -86,9 +86,9 @@ export default function Test() {
     </div>
     <div class="row mt-5">
     <div className="col-sm-6 text-left align-self-center">
-      {/* <img src={Loginbtn} 
+      <img src={Loginbtn} 
      onClick={()=>setLoginFlag(!loginFlag)} 
-    className="img-fluid loginbtn pl-5"/> */}
+    className="img-fluid loginbtn pl-5"/>
      </div>  
     {/* ):""}   */}
      
