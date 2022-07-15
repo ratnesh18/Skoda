@@ -15,12 +15,12 @@ export default function Test() {
   const { register, handleSubmit,formState: { errors } } = useForm();
   const [loginFlag,setLoginFlag] = useState(false)
   const [clickButton,setClickButton] = useState(0)
-  const[openLogin,setOpenLogin]=useState(true)
+  const[openLogin,setOpenLogin]=useState(false)
 
   useEffect(()=>{
   const  intervalID = setInterval(()=>{
 
-   // window.location.reload()
+    window.location.reload()
 
     // axios
     //     .post('https://rry3le9ny4.execute-api.ap-south-1.amazonaws.com/api/refresh')
